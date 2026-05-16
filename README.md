@@ -13,7 +13,7 @@ Built from scratch — no frameworks, no dependencies.
  
 </div>
 ---
- [Iphone Calculator: assets/Screenshot 2026-05-16 235328.png]
+ **[Iphone Calculator](assets/Screenshot 2026-05-16 235328.png)**
 ## Features
  
 - `+` `-` `*` `/` arithmetic
