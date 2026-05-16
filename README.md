@@ -12,7 +12,7 @@ Built from scratch — no frameworks, no dependencies.
 
 **[→ Live Demo](http://89.167.40.206/calculator/)**
 
-![iPhone Calculator](Iphone-Calculator/assets/Screenshot%202026-05-16%20235328.png)
+![iPhone Calculator](assests/Screenshot%202026-05-16%20235328.png)
 
 </div>
 
