@@ -3,98 +3,50 @@
 <html>
   <head>
     <title>Calculator</title>
-
-    <style>
-      body {
-        background-color: black;
-      }
-
-      .numbers {
-        background-color: rgb(51, 51, 51);
-        color: white;
-        border: none;
-        padding: 16px 24px;
-        font-size: 25px;
-        border-radius: 70px;
-        margin-right: 5px;
-      }
-      .clear {
-        font-size: 20px;
-        padding: 20px 10px;
-      }
-
-      .punkt {
-        padding: 17px 28px; 
-      }
-
-      .gleich {
-        padding: 17px 24px ;
-      }
-
-      .operation {
-        background-color: rgb(254, 160, 10);
-        color: white;
-        border: none;
-        padding: 16px 24px;
-        font-size: 25px;
-        border-radius: 70px;
-        margin-right: 5px;
-      }
-
-      .minusmal {
-        padding: 16px 26.25px;
-      }
-
-      .geteilt {
-        padding: 16px 27.25px;
-      }
-
-      .calculation {
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 45px;
-        margin-bottom: 20px;
-      }
-
-    </style>
+    <link rel="stylesheet" href="calculator.css" />
   </head>
   <body>
     <p class="calculation"></p>
-    <button class ="numbers" onclick="updateCalculation(`1`)">1</button>
+    <button class="numbers" onclick="updateCalculation(`1`)">1</button>
 
-    <button class ="numbers" onclick="updateCalculation(`2`)">2</button>
+    <button class="numbers" onclick="updateCalculation(`2`)">2</button>
 
-    <button class ="numbers" onclick="updateCalculation(`3`)">3</button>
+    <button class="numbers" onclick="updateCalculation(`3`)">3</button>
 
-    <button class ="operation" onclick="updateCalculation(`+`)">+</button>
-
-    <p></p>
-
-    <button class ="numbers" onclick="updateCalculation(`4`)">4</button>
-
-    <button class ="numbers" onclick="updateCalculation(`5`)">5</button>
-
-    <button class ="numbers" onclick="updateCalculation(`6`)">6</button>
-
-    <button class ="operation minusmal" onclick="updateCalculation(`-`)">-</button>
+    <button class="operation" onclick="updateCalculation(`+`)">+</button>
 
     <p></p>
 
-    <button class ="numbers" onclick="updateCalculation(`7`)">7</button>
+    <button class="numbers" onclick="updateCalculation(`4`)">4</button>
 
-    <button class ="numbers" onclick="updateCalculation(`8`)">8</button>
+    <button class="numbers" onclick="updateCalculation(`5`)">5</button>
 
-    <button class ="numbers"  onclick="updateCalculation(`9`)">9</button>
+    <button class="numbers" onclick="updateCalculation(`6`)">6</button>
 
-    <button class ="operation minusmal" onclick="updateCalculation(`*`)">*</button>
+    <button class="operation minusmal" onclick="updateCalculation(`-`)">
+      -
+    </button>
 
     <p></p>
 
-    <button class ="numbers" onclick="updateCalculation(`0`)">0</button>
+    <button class="numbers" onclick="updateCalculation(`7`)">7</button>
 
-    <button class ="numbers punkt" onclick="updateCalculation(`.`)">.</button>
+    <button class="numbers" onclick="updateCalculation(`8`)">8</button>
 
-    <button class ="numbers gleich"
+    <button class="numbers" onclick="updateCalculation(`9`)">9</button>
+
+    <button class="operation minusmal" onclick="updateCalculation(`*`)">
+      *
+    </button>
+
+    <p></p>
+
+    <button class="numbers" onclick="updateCalculation(`0`)">0</button>
+
+    <button class="numbers punkt" onclick="updateCalculation(`.`)">.</button>
+
+    <button
+      class="numbers gleich"
       onclick="
         calculation = eval(calculation);
         localStorage.setItem('calculation', JSON.stringify(calculation));
@@ -105,11 +57,14 @@
       =
     </button>
 
-    <button class ="operation geteilt" onclick="updateCalculation(`/`)">/</button>
+    <button class="operation geteilt" onclick="updateCalculation(`/`)">
+      /
+    </button>
 
     <p></p>
 
-    <button class ="numbers clear"
+    <button
+      class="numbers clear"
       onclick="
         calculation = '';
         localStorage.setItem('calculation', JSON.stringify(calculation));
@@ -120,18 +75,6 @@
       clear
     </button>
 
-    <script>
-      let calculation = JSON.parse(localStorage.getItem("calculation")) || "";
-      document.querySelector(".calculation").innerHTML = calculation;
-
-      function updateCalculation(value) {
-        calculation += `${value}`;
-        console.log(calculation);
-
-        localStorage.setItem("calculation", JSON.stringify(calculation));
-
-        document.querySelector(".calculation").innerHTML = calculation;
-      }
-    </script>
+    <script src="calculator.js"></script>
   </body>
 </html>
